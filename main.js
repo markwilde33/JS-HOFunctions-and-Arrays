@@ -114,7 +114,7 @@ const cantMarry3 = ages.filter(age => age <= 18);
 
 console.log(cantMarry3);
 */
-
+/*
 // filter retail companies
 const retailCompanies = companies.filter(function (company) {
    if (company.category === 'Retail') {
@@ -148,7 +148,37 @@ console.log(companyStarted);
 const tenYearsPlus = companies.filter(company => ((company.end - company.start) > 9));
 
 console.log(tenYearsPlus);
+*/
 
 // map
+
+// create array of company names 
+
+const companyNames = companies.map(function (company) {
+   return company.name;
+})
+
+// miscellaneous array
+const miscMap = companies.map(function (company) {
+   return `${company.name} RIP [${company.start} - ${company.end}]`;
+})
+
+// ES6
+const miscMap1 = companies.map(company => `${company.name} we did ${company.category}, we lost it all in ${company.end}`);
+
+console.log(companyNames, miscMap, miscMap1);
+// loop through the ages array and square each number
+const agesSquared = ages.map(age => Math.sqrt(age));
+// get age in approximate horse years
+const horseYears = ages.map(age => Math.round(age / 3));
+
+// method chaining
+const numFun = ages
+   .map(age => age * 10)
+   .map(age => Math.floor(Math.sqrt(age)));
+
+
+console.log(agesSquared, horseYears, numFun);
+
 // sort
 // reduce
