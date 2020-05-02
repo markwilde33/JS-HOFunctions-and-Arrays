@@ -153,7 +153,7 @@ console.log(tenYearsPlus);
 // map
 
 // create array of company names 
-
+/*
 const companyNames = companies.map(function (company) {
    return company.name;
 })
@@ -163,7 +163,7 @@ const miscMap = companies.map(function (company) {
    return `${company.name} RIP [${company.start} - ${company.end}]`;
 })
 
-// ES6
+// ES6 syntax
 const miscMap1 = companies.map(company => `${company.name} we did ${company.category}, we lost it all in ${company.end}`);
 
 console.log(companyNames, miscMap, miscMap1);
@@ -179,6 +179,30 @@ const numFun = ages
 
 
 console.log(agesSquared, horseYears, numFun);
+*/
 
 // sort
+
+// sort by start year
+// const companyEnd = companies.sort(function (comp1, comp2) {
+//    if (comp1.end > comp2.end) {
+//       return 1
+//    } else {
+//       return -1
+//    }
+// });
+// console.log(companyEnd);
+
+// ES6 syntax
+// sort by end year
+/*
+const companyEnd1 = companies.sort((a, b) => (a.end > b.end ? 1 : -1));
+
+console.log(companyEnd1);
+
+// sort ages
+const sortAges = ages.sort((a, b) => a - b);
+console.log(sortAges);
+*/
+
 // reduce
