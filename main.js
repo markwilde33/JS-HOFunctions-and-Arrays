@@ -206,3 +206,31 @@ console.log(sortAges);
 */
 
 // reduce
+
+// using a for loop
+let ageSum = 0;
+for (let i = 0; i < ages.length; i++) {
+   ageSum += ages[i];
+}
+console.log(ageSum);
+
+// using reduce method
+const ageSum1 = ages.reduce(function (total, age) {
+   return total + age;
+}, 0);
+
+// ES6 syntax
+const ageSum2 = ages.reduce((total, age) => total + age, 0);
+
+console.log(ageSum1, ageSum2);
+
+// Get total years for all companies
+
+const totalYears = companies.reduce(function (total, company) {
+   return total + (company.end - company.start);
+}, 0);
+
+// ES6 syntax
+const totalYears1 = companies.reduce((total, company) => total + (company.end - company.start), 0);
+
+console.log(totalYears, totalYears1);
