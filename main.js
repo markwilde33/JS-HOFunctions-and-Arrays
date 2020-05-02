@@ -74,6 +74,7 @@ companies.forEach(company => console.log(company));
 // filter
 
 // standard logic, set empty arrays, use for loop, push to arrays
+/*
 let canMarry = [];
 let cantMarry = [];
 for (let i = 0; i < ages.length; i++) {
@@ -112,8 +113,41 @@ console.log(canMarry3);
 const cantMarry3 = ages.filter(age => age <= 18);
 
 console.log(cantMarry3);
+*/
 
+// filter retail companies
+const retailCompanies = companies.filter(function (company) {
+   if (company.category === 'Retail') {
+      return true;
+   }
+});
 
+console.log(retailCompanies);
+
+// ES6 syntax
+const autoCompanies = companies.filter(company => company.category === 'Auto');
+
+console.log(autoCompanies);
+
+// filter companies started in the 80's
+const companyFounded = companies.filter(function (company) {
+   if (company.start >= 1980 && company.start <= 1989) {
+      return true;
+   }
+});
+
+console.log(companyFounded);
+
+// ES6 syntax
+const companyStarted = companies.filter(company =>
+   (company.start >= 1980 && company.start <= 1989));
+
+console.log(companyStarted);
+
+// get companies that lasted 10+ years
+const tenYearsPlus = companies.filter(company => ((company.end - company.start) > 9));
+
+console.log(tenYearsPlus);
 
 // map
 // sort
